@@ -20,6 +20,11 @@ in your browser go to [http://localhost:4200](http://localhost:4200)
 
 
 # [Commit changes](#commit-changes)
+
+```bash
+# see list of new/modified files
+git status 
+
 git add <file to commit>
 
 git commit -m '<commit message>'
@@ -27,5 +32,5 @@ git commit -m '<commit message>'
 git push
 
 ***** DO NOT COMMIT node_modules *****
-
+```
 
