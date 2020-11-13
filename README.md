@@ -1,4 +1,4 @@
-# [ARC Libor/RFR]
+# ARC Libor/RFR
 
 # [Quick start](#quick-start)
 
