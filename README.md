@@ -1,4 +1,4 @@
-#ARC Libor
+#[ARC Libor project]
 
 # [Quick start](#quick-start)
 
