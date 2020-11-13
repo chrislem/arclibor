@@ -19,3 +19,13 @@ npm start
 in your browser go to [http://localhost:4200](http://localhost:4200) 
 
 
+# [Commit changes](#commit-changes)
+git add <file to commit>
+
+git commit -m '<commit message>'
+
+git push
+
+***** DO NOT COMMIT node_modules *****
+
+
