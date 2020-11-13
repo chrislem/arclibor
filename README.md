@@ -1,6 +1,6 @@
 # ARC Libor/RFR
 
-Christophe LEMIERE & Jean-Guillaume HUBERT 
+Christophe LEMIERE & Jean-Guillaume HUBERT & Médouille
 
 # [Quick start](#quick-start)
 
