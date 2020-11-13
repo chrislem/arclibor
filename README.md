@@ -1,4 +1,4 @@
-###### ARC Libor project
+# [ARC Libor/RFR]
 
 # [Quick start](#quick-start)
 
