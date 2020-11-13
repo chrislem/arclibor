@@ -1,0 +1,101 @@
+@import '@ffdc/uxg-angular-theme/lib/core/style/spacing';
+
+a {
+  text-decoration: none;
+}
+
+.uxg-login-page {
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  .uxg-illustration-container {
+    display: none;
+  }
+}
+
+  .uxg-login-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px + (2*$uxg-spacing-5);
+    min-width: 220px;
+    width: 80vw;
+    height: 100%;
+    align-items: flex-start;
+    padding: $uxg-spacing-5;
+  } 
+
+  .uxg-logo {
+    margin-bottom: $uxg-spacing-1 * 15;
+  }
+
+  .uxg-product-name {
+    margin-bottom: $uxg-spacing-1;
+  }
+
+  .uxg-corporate-name {
+    margin-top: $uxg-spacing-0;
+    margin-bottom: $uxg-spacing-5;
+  }
+
+  mat-form-field {
+    align-self: stretch;
+    margin-bottom: $uxg-spacing-3;
+  }
+
+  // To remove when filled input are ready
+  mat-icon[matPrefix] {
+    opacity: 0.5;
+    padding-bottom: 13px;
+    padding-right: 8px;
+  }
+
+  .mat-flat-button {
+    align-self: stretch;
+    margin-top: $uxg-spacing-3;
+    margin-bottom: $uxg-spacing-3;
+  }
+
+  .login-actions {
+    align-self: center;
+
+    .mat-checkbox {
+      margin-right: $uxg-spacing-3;
+    }
+  }
+
+  .fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+  .login-footer {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    flex-direction: row;
+    margin-top: $uxg-spacing-5;
+    bottom: 0;
+  }
+
+  .uxg-secure-login {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+@media screen and (min-width: 720px) {
+  .uxg-login-page {
+    grid-template-columns: 1fr 1.2fr;
+    .uxg-illustration-container {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: left / cover no-repeat url('https://res.cloudinary.com/ffdc/image/upload/c_scale,q_70,w_1000/512637406_pee1lo.jpg');
+    }
+  }
+}

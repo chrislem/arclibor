@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@ffdc/uxg-angular-theme/all-theme';
+
+body {
+    margin: 0;
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+  
+  }
+  
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+  
+  }
+  
+  html, body { height: 100%; }
+  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
