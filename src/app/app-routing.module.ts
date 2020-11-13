@@ -10,6 +10,7 @@ import { LoginComponent } from './modules/general/login/login.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent, },
+  { path: 'home', component: HomeComponent, },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
   { path: 'signin', component: SigninComponent },

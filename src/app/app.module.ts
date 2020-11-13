@@ -51,17 +51,11 @@ import { AboutComponent } from './modules/general/about/about.component';
 import { SigninComponent } from './modules/general/signin/signin.component';
 import { NotFoundComponent } from './modules/general/not-found/not-found.component';
 import { LoginComponent } from './modules/general/login/login.component';
+import { UxgToolbar } from './modules/general/toolbar/toolbar.component';
+import { UxgGlobalNav } from './modules/general/global-nav/global-nav.component';
+import { UxgSidenav } from './modules/general/sidenav/sidenav.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ContactComponent,
-    AboutComponent,
-    SigninComponent,
-    NotFoundComponent,
-    LoginComponent
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -103,6 +97,18 @@ import { LoginComponent } from './modules/general/login/login.component';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule    
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent,
+    SigninComponent,
+    NotFoundComponent,
+    LoginComponent,
+    UxgToolbar,
+    UxgGlobalNav,
+    UxgSidenav
   ],
   providers: [],
   bootstrap: [AppComponent]
