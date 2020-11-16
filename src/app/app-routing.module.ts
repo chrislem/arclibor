@@ -1,27 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ARRFormComponent } from './modules/arr-standalone/arr-form.component';
 
-import { AboutComponent } from './modules/general/about/about.component';
-import { ContactComponent } from './modules/general/contact/contact.component';
 import { HomeComponent } from './modules/general/home/home.component';
-import { SigninComponent } from './modules/general/signin/signin.component';
+import { LiborviewComponent } from './modules/libor-transform/liborview.component';
+import { RatescompviewComponent } from './modules/rates-comp/ratescompview.component';
+
 import { AuthGuard } from './_helpers/auth.guard';
-
-// const routes: Routes = [
-//   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-//   { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-//   { path: 'contact', component: ContactComponent ,canActivate: [AuthGuard]},
-//   { path: 'about', component: AboutComponent,canActivate: [AuthGuard] },
-//   { path: 'signin', component: SigninComponent,canActivate: [AuthGuard] },
-//   { path: '**', component: NotFoundComponent,canActivate: [AuthGuard] }
-// ];
-
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule],
-//   declarations: []
-// })
-// export class AppRoutingModule { }
 
 
 const accountModule = () => import('./modules/account/account.module').then(x => x.AccountModule);
@@ -30,6 +15,10 @@ const accountModule = () => import('./modules/account/account.module').then(x =>
 const routes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
     { path: 'account', loadChildren: accountModule },
+    { path: 'arr', component: ARRFormComponent, canActivate: [AuthGuard] },
+    { path: 'libor', component: LiborviewComponent, canActivate: [AuthGuard] },
+    { path: 'rates', component: RatescompviewComponent, canActivate: [AuthGuard] },
+
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

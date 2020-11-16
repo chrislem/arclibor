@@ -4,31 +4,28 @@
   &nbsp;
   &nbsp;
   &nbsp;
-  <button mat-stroked-button color="accent" value ="ARR_Standalone">
+  <button mat-stroked-button color="accent" value ="ARR_Standalone" routerLink="/arr">
     <mat-icon>center_focus_strong</mat-icon>
     ARR standalone
   </button>
-  <button mat-stroked-button color="accent" value ="Libor_Transformation">
+  <button mat-stroked-button color="accent" value ="Libor_Transformation" routerLink="/libor">
     <mat-icon>transform</mat-icon>
     LIBOR transformation
   </button>
-  <button mat-stroked-button color="accent" value ="Rates_comparison">
+  <button mat-stroked-button color="accent" value ="Rates_comparison" routerLink="/rates">
     <mat-icon>compare</mat-icon>
     Rates comparison
   </button>
 	<span class="fill-remaining-space"></span>
 	<div class="uxg-toolbar-actions">
-		<button mat-icon-button color="neutral">
-        <mat-icon>search</mat-icon>
+		<button mat-icon-button color="neutral" routerLink="/">
+        <mat-icon>home</mat-icon>
     </button>
 		<button mat-icon-button color="neutral">
         <mat-icon>notifications</mat-icon>
     </button>
 		<button mat-icon-button color="neutral">
         <mat-icon>help_outline</mat-icon>
-    </button>
-		<button mat-icon-button color="neutral">
-        <mat-icon>apps</mat-icon>
     </button>
 	</div>
 	<button mat-icon-button [matMenuTriggerFor]="menuHero" color="gradient">
@@ -42,14 +39,14 @@
 <mat-menu #menuHero="matMenu" class="uxg-user-profile">
 	<div class="uxg-menu-header">
 		<div class="uxg-avatar-hero-block">
-			<div class="uxg-avatar" large>RH</div>
-			<h6 class="uxg-h6">Raya Hristova</h6>
-			<span class="uxg-caption">raya.hristova@finastra.com</span>
+			<div class="uxg-avatar" large>{{user.firstName.charAt(0)}}{{user.lastName.charAt(0)}}</div>
+			<h6 class="uxg-h6">{{user.username}}</h6>
+			<span class="uxg-caption">{{user.email}}</span>
 		</div>
 	</div>
 	<mat-divider></mat-divider>
 	<div class="uxg-menu-footer">
-		<button mat-flat-button color="primary" dense>
+		<button mat-flat-button color="primary" dense (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>
       Logout
     </button>
@@ -58,57 +55,6 @@
     </button>
 	</div>
 </mat-menu>
-<!-- <mat-toolbar class="uxg-toolbar uxg-toolbar-elevated">
-  <button mat-icon-button>
-    <mat-icon (click)="toggleNav()">menu</mat-icon>
-  </button>
-  <div class="uxg-toolbar-logo-small no-mobile">
-  </div>
-  <ul class="uxg-breadcrumb">
-    <li class="uxg-h6">PRODUCT NAME</li>
-    <li class="no-mobile">Level</li>
-    <li class="no-mobile">Sub-level</li>
-  </ul>
-  <span class="fill-remaining-space"></span>
-  <button mat-stroked-button color="primary" class="no-mobile" dense>
-    <mat-icon>edit</mat-icon>
-    Button
-  </button>
-  <button mat-icon-button color="neutral">
-    <mat-icon>search</mat-icon>
-  </button>
-  <button mat-icon-button color="neutral">
-    <mat-icon>notifications</mat-icon>
-  </button>
-  <button mat-icon-button color="neutral">
-    <mat-icon>help_outline</mat-icon>
-  </button>
-  <button mat-icon-button color="neutral">
-    <mat-icon>apps</mat-icon>
-  </button>
-  <button mat-icon-button color="gradient" [matMenuTriggerFor]="menuHero" ng-init>
-    <mat-icon>account_circle</mat-icon>
-  </button>
-  <mat-menu #menuHero="matMenu" class="uxg-user-profile">
-    <div class="uxg-menu-header">
-      <div class="uxg-avatar-hero-block">
-        <div class="uxg-avatar" large>RH</div>
-        <h6 class="uxg-h6">Raya Hristova</h6>
-        <span class="uxg-caption">raya.hristova@finastra.com</span>
-      </div>
-    </div>
-    <mat-divider></mat-divider>
-    <div class="uxg-menu-footer">
-      <button mat-flat-button color="primary" dense>
-        <mat-icon>exit_to_app</mat-icon>
-        Logout
-      </button>
-      <button mat-button color="primary" dense>
-        View profile
-      </button>
-    </div>
-</mat-menu>
-  <button mat-icon-button class="uxg-toolbar-icon-menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-</mat-toolbar> -->
+<div >
+  <router-outlet></router-outlet> 
+</div>

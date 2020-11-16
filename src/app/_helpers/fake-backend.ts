@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
+import { TestBed } from '@angular/core/testing';
 
 // array in local storage for registered users
 let users = JSON.parse(localStorage.getItem('users')) || [];
@@ -56,7 +57,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 username: "Chris",
                 firstName: "Chris",
                 lastName: "Chris",
-                token: 'fake-jwt-token'
+                token: 'fake-jwt-token',
+                email: 'chris@test.fr'
             })
         }
 

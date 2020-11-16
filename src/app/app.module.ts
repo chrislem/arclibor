@@ -47,13 +47,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/general/home/home.component';
-import { ContactComponent } from './modules/general/contact/contact.component';
-import { AboutComponent } from './modules/general/about/about.component';
-import { SigninComponent } from './modules/general/signin/signin.component';
 
 import { UxgToolbar } from './modules/general/toolbar/toolbar.component';
-import { UxgGlobalNav } from './modules/general/global-nav/global-nav.component';
-import { UxgSidenav } from './modules/general/sidenav/sidenav.component';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake-backend';
@@ -61,6 +56,10 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 
 import { ARRFormComponent } from './modules/arr-standalone/arr-form.component';
+import { LiborviewComponent } from './modules/libor-transform/liborview.component';
+import { RatescompviewComponent } from './modules/rates-comp/ratescompview.component';
+import { WelcomeviewComponent } from './modules/welcome/welcomeview.component';
+
 
 @NgModule({
   imports: [
@@ -109,13 +108,11 @@ import { ARRFormComponent } from './modules/arr-standalone/arr-form.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent,
-    AboutComponent,
-    SigninComponent,
     UxgToolbar,
-    UxgGlobalNav,
-    UxgSidenav,
-    ARRFormComponent
+    ARRFormComponent,
+    LiborviewComponent,
+    RatescompviewComponent,
+    WelcomeviewComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
