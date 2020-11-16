@@ -1,17 +1,21 @@
 <mat-toolbar class="uxg-toolbar uxg-toolbar-elevated">
-	<button mat-icon-button class="uxg-toolbar-menu" (click)="toggleNav()">
-    <mat-icon>menu</mat-icon>
+	<div class="uxg-logo" dense margin:10px>
+  </div>
+  &nbsp;
+  &nbsp;
+  &nbsp;
+  <button mat-stroked-button color="accent" value ="ARR_Standalone">
+    <mat-icon>center_focus_strong</mat-icon>
+    ARR standalone
   </button>
-	<div class="uxg-logo" dense>
-	</div>
-	<ul class="uxg-breadcrumb uxg-breadcrumb-responsive">
-		<button mat-icon-button color="accent" class="uxg-breadcrumb-back">
-      <mat-icon>chevron_left</mat-icon>
-    </button>
-		<li class="uxg-h6">PRODUCT NAME</li>
-		<li>Level</li>
-		<li>Sub-level</li>
-	</ul>
+  <button mat-stroked-button color="accent" value ="Libor_Transformation">
+    <mat-icon>transform</mat-icon>
+    LIBOR transformation
+  </button>
+  <button mat-stroked-button color="accent" value ="Rates_comparison">
+    <mat-icon>compare</mat-icon>
+    Rates comparison
+  </button>
 	<span class="fill-remaining-space"></span>
 	<div class="uxg-toolbar-actions">
 		<button mat-icon-button color="neutral">
