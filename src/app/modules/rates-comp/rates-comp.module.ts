@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RatescompviewComponent } from './ratescompview.component';
+import { RatecurveComponent } from './ratecurve.component';
 
 
 
 @NgModule({
-  declarations: [RatescompviewComponent],
-  imports: [
-    CommonModule
-  ]
+  declarations: [RatescompviewComponent, RatecurveComponent],
+  exports: [RatescompviewComponent, RatecurveComponent]
+
 })
 export class RatesCompModule { }
