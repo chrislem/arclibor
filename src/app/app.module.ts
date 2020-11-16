@@ -60,6 +60,7 @@ import { fakeBackendProvider } from './_helpers/fake-backend';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 
+import { ARRFormComponent } from './modules/arr-standalone/arr-form.component';
 
 @NgModule({
   imports: [
@@ -113,7 +114,8 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
     SigninComponent,
     UxgToolbar,
     UxgGlobalNav,
-    UxgSidenav
+    UxgSidenav,
+    ARRFormComponent
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
