@@ -1,0 +1,50 @@
+<div class="uxg-login-page">
+    <div class="uxg-login-container">
+        <span class="fill-remaining-space"></span>
+        <div class="uxg-logo"></div>
+        <h1 class="uxg-h5 uxg-product-name">ARC Libor</h1>
+        <h5 class="uxg-display-6 uxg-corporate-name">xxxxxxxxxxxxxx</h5>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-icon matPrefix>perm_identity</mat-icon>
+                <mat-label>User ID</mat-label>
+                <input matInput type="text" formControlName="username" />
+                <mat-hint>Please enter your username or ID</mat-hint>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-icon matPrefix>lock</mat-icon>
+                <mat-label>Password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password"/>
+                <button mat-icon-button (click)="hide = !hide" color="primary" matSuffix>
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-hint>Please enter your password</mat-hint>
+            </mat-form-field>
+            <div class="form-group">
+
+                <button mat-flat-button color="primary" [disabled]="loading">
+                    <mat-icon>arrow_right_alt</mat-icon>
+                    Login
+                </button>
+
+                <div class="login-actions">
+                    <a routerLink="../register" class="btn btn-link">Register</a>
+                  </div>                
+                
+            </div>
+        </form>
+        <span class="fill-remaining-space"></span>
+  
+        <div class="login-footer">
+          <a href="http://www.finastra.com" class="uxg-body-3">Finastra.com</a>
+          <span class="fill-remaining-space"></span>
+          <div class="uxg-secure-login">
+            <img src="https://res.cloudinary.com/ffdc/image/upload/v1584350622/security_24px_outlined_giy3g4.svg"/>
+            <span class="uxg-subtitle-3">Secure <span class="uxg-body-3">login</span></span>
+          </div>
+        </div>        
+    </div>
+    <div class="uxg-illustration-container">
+    </div>
+</div>
+

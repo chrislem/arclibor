@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AccountService } from './_services/account.service';
+import { User } from './_models/user.model';
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-starter';
-  version = 'Angular version 11.0.0';
+  user: User;
+
+  constructor(private accountService: AccountService) {
+      this.accountService.user.subscribe(x => this.user = x);
+  }
+
+  logout() {
+      this.accountService.logout();
+  }
 }

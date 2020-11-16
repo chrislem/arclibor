@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
-
-import { AppRoutingModule } from './app-routing.module';
-import { Routes, RouterModule } from '@angular/router';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ScrollToTopModule } from '@ffdc/uxg-angular-components/scroll-to-top';
+import { AlertModule } from '@app/modules/alert/alert.module';
+import { AccountRoutingModule } from './account-routing.module';
+import { LayoutComponent } from './layout/layout.component';
+import { LoginComponent } from './login.component';
+import { RegisterComponent } from './register.component';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -42,32 +42,13 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './modules/general/home/home.component';
-import { ContactComponent } from './modules/general/contact/contact.component';
-import { AboutComponent } from './modules/general/about/about.component';
-import { SigninComponent } from './modules/general/signin/signin.component';
-
-import { UxgToolbar } from './modules/general/toolbar/toolbar.component';
-import { UxgGlobalNav } from './modules/general/global-nav/global-nav.component';
-import { UxgSidenav } from './modules/general/sidenav/sidenav.component';
-
-// used to create fake backend
-import { fakeBackendProvider } from './_helpers/fake-backend';
-import { JwtInterceptor } from './_helpers/jwt.interceptor';
-import { ErrorInterceptor } from './_helpers/error.interceptor';
 
 
 @NgModule({
+  declarations: [LayoutComponent, LoginComponent, RegisterComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    BrowserAnimationsModule,
-    ScrollToTopModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -102,26 +83,11 @@ import { ErrorInterceptor } from './_helpers/error.interceptor';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule,
-    HttpClientModule,    
-  ],
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ContactComponent,
-    AboutComponent,
-    SigninComponent,
-    UxgToolbar,
-    UxgGlobalNav,
-    UxgSidenav
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
-    // provider used to create fake backend
-    fakeBackendProvider
-],
-  bootstrap: [AppComponent]
+    MatTreeModule,    
+    CommonModule,
+    ReactiveFormsModule,
+    AlertModule,
+    AccountRoutingModule
+  ]
 })
-export class AppModule { }
+export class AccountModule { }
