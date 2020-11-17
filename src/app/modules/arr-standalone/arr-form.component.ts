@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./arr-form.component.scss']
 })
 export class ARRFormComponent implements OnInit {
-
+  datefield=true;
   constructor() { }
 
   ngOnInit(): void {
