@@ -1,11 +1,17 @@
-<uxg-chart (onClick)="onClick($event)" (onSelected)="onSelected($event)" (onDoubleClick)="onDoubleClick($event)">
-    <uxg-legend [position]="legendPosition"></uxg-legend>
-    <uxg-trace
-      *ngFor="let trace of traces"
-      [dimension]="trace.dimension"
-      [dimensionName]="trace.dimensionName"
-      [measure]="trace.measure"
-      [measureName]="trace.measureName"
-      [type]="trace.type"
-    ></uxg-trace>
-  </uxg-chart>
+<div class='uxg-overview-layout' style="border: thin solid black">
+	<h3 class="uxg-h3"> Trades Overview </h3>
+	<div class="account-card">
+		<mat-card class="account-card">
+			<mat-card-content>
+				<div class="round-icon">
+					<mat-icon aria-hidden="false" aria-label="Account card">visibility</mat-icon>
+				</div>
+				<div>
+					<div class="uxg-body-1">dddd</div>
+					<div class="uxg-h5">ddddd</div>
+					<div class="uxg-subtitle-2">dddddd</div>
+				</div>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>

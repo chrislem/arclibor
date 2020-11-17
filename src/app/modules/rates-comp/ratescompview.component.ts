@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-ratescompview',
   templateUrl: './ratescompview.component.html',
-  styleUrls: ['./ratescompview.component.css']
+  styleUrls: ['./ratescompview.component.scss']
 })
 export class RatescompviewComponent  {
 

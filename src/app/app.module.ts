@@ -59,6 +59,8 @@ import { ARRFormComponent } from './modules/arr-standalone/arr-form.component';
 import { LiborviewComponent } from './modules/libor-transform/liborview.component';
 import { RatescompviewComponent } from './modules/rates-comp/ratescompview.component';
 import { WelcomeviewComponent } from './modules/welcome/welcomeview.component';
+import { RatecurveComponent } from './modules/rates-comp/ratecurve.component';
+import { RateformComponent } from './modules/rates-comp/rateform.component';
 
 
 @NgModule({
@@ -112,6 +114,8 @@ import { WelcomeviewComponent } from './modules/welcome/welcomeview.component';
     ARRFormComponent,
     LiborviewComponent,
     RatescompviewComponent,
+    RatecurveComponent,
+    RateformComponent,
     WelcomeviewComponent
   ],
   providers: [
