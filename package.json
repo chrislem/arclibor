@@ -1,9 +1,9 @@
 {
-  "name": "angular-starter",
-  "version": "11.0.0",
+  "name": "HackARC",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4200",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,18 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ganatan/angular-example-starter.git"
+    "url": "https://github.com/chrislem/arclibor.git"
   },
   "author": {
-    "name": "danny",
-    "email": "dannyganatan@gmail.com",
-    "url": "https://www.ganatan.com/"
+    "name": "clemiere",
+    "email": "christophe.lemiere@gmail.com"
   },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ganatan/angular-example-starter/issues"
-  },
-  "homepage": "https://github.com/ganatan/angular-example-starter#readme",
   "private": true,
   "dependencies": {
     "@angular/animations": "11.0.0",
