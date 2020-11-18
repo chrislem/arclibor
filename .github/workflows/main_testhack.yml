@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'testhack'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7028d5787d6a42a287ba62b801e15d6e }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a2b61d2016944cc08604a72e53eef629 }}
         package: .
