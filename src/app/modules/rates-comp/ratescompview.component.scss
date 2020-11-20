@@ -1,9 +1,13 @@
 .uxg-flex-layout{
   display: flex;
+  margin-top: 25px;
+  
   .uxg-nav-list {
-  min-width: 270px;
+  min-width: 300px;
   min-height: 900px;
+  margin-left: 25px;
   border-left-color: transparent;
+  
   a[mat-list-item]{
     &:hover{
     background-color: #FAFAFA
@@ -25,7 +29,7 @@
 .uxg-flex-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 100px;
 
 }
 .uxg-display button {
@@ -84,7 +88,7 @@ mat-list{
 
 
 .uxg-initial-page-layout {
-  width: 100%;
+  width: 900px;
   display: flex;
   align-items: baseline;
   justify-content: center;

@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollToTopModule } from '@ffdc/uxg-angular-components/scroll-to-top';
+import { ChartModule } from '@ffdc/uxg-angular-components/chart';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -49,7 +50,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './modules/general/home/home.component';
 
 import { UxgToolbar } from './modules/general/toolbar/toolbar.component';
-
+import {NgxChartsModule} from '@swimlane/ngx-charts'
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake-backend';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
@@ -61,6 +62,8 @@ import { RatescompviewComponent } from './modules/rates-comp/ratescompview.compo
 import { WelcomeviewComponent } from './modules/welcome/welcomeview.component';
 import { RatecurveComponent } from './modules/rates-comp/ratecurve.component';
 import { RateformComponent } from './modules/rates-comp/rateform.component';
+import { ArcServiceRateService } from './_services/arc-service-rate.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -105,7 +108,10 @@ import { RateformComponent } from './modules/rates-comp/rateform.component';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    HttpClientModule,    
+    HttpClientModule,
+    NgxChartsModule,
+    ReactiveFormsModule,
+    ChartModule  
   ],
   declarations: [
     AppComponent,
@@ -123,7 +129,9 @@ import { RateformComponent } from './modules/rates-comp/rateform.component';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
-    fakeBackendProvider
+    fakeBackendProvider,
+    ArcServiceRateService
+    
 ],
   bootstrap: [AppComponent]
 })

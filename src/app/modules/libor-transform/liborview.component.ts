@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-liborview',
   templateUrl: './liborview.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LiborviewComponent implements OnInit {
 
-  constructor() { }
+
 
   ngOnInit(): void {
   }

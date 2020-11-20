@@ -10,12 +10,14 @@ import { User } from './_models/user.model';
 })
 export class AppComponent {
   user: User;
+  logged = false;
 
   constructor(private accountService: AccountService) {
       this.accountService.user.subscribe(x => this.user = x);
   }
 
   logout() {
+    this.logged = false;
       this.accountService.logout();
   }
 }
