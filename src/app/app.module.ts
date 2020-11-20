@@ -7,7 +7,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ScrollToTopModule } from '@ffdc/uxg-angular-components/scroll-to-top';
-import { ChartModule } from '@ffdc/uxg-angular-components/chart';
 
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatBadgeModule} from '@angular/material/badge';
@@ -110,8 +109,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTreeModule,
     HttpClientModule,
     NgxChartsModule,
-    ReactiveFormsModule,
-    ChartModule  
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
